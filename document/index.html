@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eduor React Next JS Education Template Documentation</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="left-side">
+            <div class="logo">
+                <a href="#">
+                    <img src="img/logo.png">
+                </a>
+            </div>
+
+            <div class="left-content">
+                <ul role="tablist">
+                    <li class="active"><a href="#one" data-toggle="tab">Welcome</a></li>
+                    <li><a href="#two" data-toggle="tab">Main File Structure</a></li>
+                    <li><a href="#three" data-toggle="tab">Configuration</a></li>
+                    <li><a href="#four" data-toggle="tab">Components Structure</a></li>
+                    <li><a href="#five" data-toggle="tab">CSS Structure</a></li>
+                    <li><a href="#six" data-toggle="tab">Redux Toolkit</a></li>
+                    <li><a href="#seven" data-toggle="tab">Pages Structure</a></li> 
+                    <li><a href="#eight" data-toggle="tab">Deployment</a></li>
+                    <li><a href="#source" data-toggle="tab">Sources & Credits</a></li>
+                    <li><a href="#support" data-toggle="tab">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; Copyright <a href="https://themeforest.net/user/reacttemplatebuilder">Eduor</a>
+                    <script>document.write(new Date().getFullYear())</script>.
+                </p>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="right-content">
+                <div id="one" class="content active fade in">
+                    <h1><span>Eduor</span> - Education React Next.js Template</h1>
+                    <div class="created">
+                        <p>Created : 13 February 2024 <br>
+                            Last Update : 13 February 2024<br>
+                            By : <a href="https://themeforest.net/user/reacttemplatebuilder">React Template Builder</a><br>
+                            Email : azizurrahman2533@gmail.com<br>
+                            <br>
+                            Thank you for purchasing our Template. If you have any question, please feel free to contact
+                            us.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="two" class="content fade">
+                    <h1>Main File Structure</h1>
+                    <p>
+                        All the file are well organized, its so easy to work with the template.
+                        <br>
+                        1. Unzip the mainFile.
+                        <br>
+                        You will find 7 folder and 8 other files.
+                        <br>
+                        In the app folder there are all the pages for the template any folder created in this folder will become a page and take page.tsx as index of that directory. The admin directory stores the dashboard of sanity admin panel.
+                        <br>
+                        In the component folder there are the components of the template that are used all around and from here the components can be modifed according to your need. 
+                        <br>
+                        In the public folder there are assets like css,font and images.
+                        <br>
+                        In the redux folder there are files which contains all the state management logic for the template.
+                        <br>
+                        In the sanity folder there are two files. One is to connect to sanity client and another one is to query data from sanity dataset and those that will be used in the template.
+                        <br>
+                        In the Schemas folder there are schemas for the sanity dataset. In this you can add or modify the dataset structure of the sanity cms. All the schemas are imported in the index of the directory.
+                        <br>
+                        In the type folder there is index.ts file in which contains the data type of query data used in the template.
+                       
+                        <br>
+                        The rest of the files are .gitignore, next-env.d.ts, tsconfig.json, next.config.js, package-lock.json, package.json and readme file. 
+                    </p>
+                    <img src="img/file.png" alt="" >
+                </div>
+
+                <div id="three" class="content fade">
+                    <h1>Configuration</h1>
+                    <h3>Initial Steps you need to follow:</h3>
+                    <p>
+                        1. Unzip the main-file. And run "npm install" in the root directory of the main file to install node modules.
+                        <br/>
+                        2. You can checkout the demo using "npm run dev" in localhost. The current data of the template you will see the demo dataset data. To add your own dataset you will require a sanity account.
+                    </p>
+                    <h3>You'll typically need to follow these general steps for setting up Sanity CMS:</h3>
+                    <p>
+                        1. Create a Sanity Account:
+
+                        If you don't have a Sanity account, you'll need to create one at https://www.sanity.io/. Create a sanity account with a google account, github or email. You will need this account for getting in the admin panel of the cms and creating a dataset. Sanity provides a single free dataset if you want to upgrade you can checkout their pricing.
+                        <br>
+                        2. After creating a profile you will be redirected to a landing page where you will select some information and at the end give a name to your project and when the section comes to select or build a new project just go to manage section of sanity.
+                        <br>
+                        3. Navigate API section:
+                        Select CORS origins section and add CORS origin of the localhost url. Most common localhost is http://localhost:3000/.
+                    </p>
+                    <h3>Connecting Sanity to the Eduor</h3>
+                    <p>
+                        1. After creating Sanity Account head back to the main-file of eduor.
+                        <br>
+                        2. There is sanity.config.ts in the root open that in code editor. In the sanity manage page you will see your project id copy that and paste it in the sanity.config.ts projectId field. Also adjust the title and dataset according to your created project configuration in sanity.
+                        <br>
+                        3. We also need to update sanity.client.ts file which is in sanity folder. Just put the projectId and dataset name in that.
+                    </p>
+                    <h3>Populating the database</h3>
+                    <p>
+                        1. After adding your database at initial your database will be empty so you need to upload the data you want to display in the sanity admin panel.
+                        <br>
+                        2. To access sanity dashboard start eduor in local server go to "/admin" like default homepage will be "http://localhost:3000/" admin panel url should be "http://localhost:3000/admin".
+                        <br>
+                        3. To access the database you will need to authenticate with the account you created the sanity account. After authentication you will be redirected to the admin panel where you can upload the data. The schemas are predefined in the schemas folder. If you want you can customize the schemas according to your need in there.
+                    </p>
+                    <h3>Screenshot of creating a sanity account</h3>
+                    <img src="img/sanity1.png" alt="" >
+                    <img src="img/sanity2.png" alt="" >
+                    <img src="img/sanity3.png" alt="" >
+                    <img src="img/sanity4.png" alt="" >
+                    <img src="img/sanity5.png" alt="" >
+                    <img src="img/sanity6.png" alt="" >
+                    <img src="img/sanity7.png" alt="" >
+                    <h3>Screenshot of connecting sanity account in Eduor</h3>
+                    <img src="img/sanity-config.png" alt="" >
+                    <img src="img/sanity-client.png" alt="" >
+                    <h3>Screenshot of populating the database</h3>
+                    <img src="img/sanity-auth.png" alt="" >
+                    <img src="img/sanity-panel.png" alt="" >
+                    <img src="img/sanity-add.png" alt="" >
+                </div>
+
+                <div id="four" class="content fade">
+                    <h1>Components Structure</h1>
+                    <div>In the component folder it is cleanly organized for better use and reusabilty of the components. </div>
+                    <div>The components are mounted in the page.tsx file in the app directory according to need</div>
+                    <div>There are some components which are used by passing down props which are easy to understand.</div>
+                    <img src="img/component.png" alt="">
+                </div>
+
+                <div id="five" class="content fade">
+                    <h1>CSS Structure</h1>
+                    <img src="img/css.png" alt="">
+                </div>
+
+                <div id="six" class="content fade">
+                    <h1>Redux Toolkit</h1>
+                    <div>The Redux folder contains all the state management of the web app and the functions or states can be imported to any component using useAppDispatch and useAppSelector custom hook in the hook file in the redux directory.</div>
+                    <div>The use of redux toolkit reduces the excess props drilling and the reduces multiple lines of codes to improve performance.</div>
+                    <div>The functions in redux toolkit are in feature folder in redux directory and are well documented for your better understanding.</div>
+                    <h3>Structure of redux toolkit</h3>
+                    <img src="img/redux-feature.png" alt="" >
+                    <img src="img/redux-root.png" alt="" >
+                    <img src="img/redux-store.png" alt="">
+                    <img src="img/redux-hooks.png" alt="">
+                    <img src="img/redux-provider.png" alt="">
+                </div>
+
+                <div id="seven" class="content fade">
+                    <h1>App Directory Structure</h1>
+                    <div>To define a route in the latest next js version you can read the docs for better understanding. In the root of app directory page.js acts as index page of the web app. And create a new route like '/about' we need to create a folder named about and create a page.js file in that folder which will act as index for the directory. The current next js is folder based routing which makes it easier for nested routing. </div>
+                    <p>In the index of a page directory we fetch data from sanity. The query is done in sanity.query.ts file of sanity folder. The fetched data is sent to components that require the data by prop drilling. </p>
+                    <img src="img/app.png" alt="">
+                </div>
+                <div id="eight" class="content fade">
+                    <h1>To deploy Eduor to Vercel</h1>
+                    <h3>Make sure you uploaded the all the data in the dataset then check those data in localhost. After making sure the the template proceed to deployment to vercel.</h3>
+                    <p>
+                        1. Create a Vercel Account:
+
+                        If you don't have a Vercel account, you'll need to create one at https://vercel.com/signup.
+                        <br>
+                        2. If yoy have a github account push the main file in a repository and link the github to your vercel account.
+                        <br>
+                        3. Navigate to Vercel overview:
+
+                        Click add new. Select project and if you have your github link you will see the repositories, select the repository of Eduor.
+                        <br>
+                        4. After importing the repository you will be redirected to deployment page here you can change the project name and many other.
+                        <br>
+                        5. After selecting a name for the project just click on deploy button. It will take some time and after it will be live and a url will be given which can modified later on.
+                        <br>
+                        6. If you are importing from github continous deployment is supported in Vercel. If you update the code in github it will auto update the live site.
+                        <br>
+                        7. Now we need to configure vercel to redeploy the web app whenever a changes occurs in the date for that go to project details > setting section.
+                        <br>
+                        8. In deploy hook create hook by giving it name and branch name. After deploying the hook copy the url we will need that in sanity manage panel.
+                        <br>
+                        9. Go into your sanity manage panel in the api tab click on create webhook. In that give it a name and fillout the must filled forms and here in the url section paste previous copied url of the vercel deploy hook. And in trigger on section select all three. No advance settings required just save it.
+                        <br>
+                        For more deployment instruction you can follow this <a href="https://nextjs.org/learn/basics/deploying-nextjs-app/platform-details" target="_blank">Link</a>of official document.
+                    </p>
+                    <h3>Some Screenshots given below for better understanding</h3>
+                    <img src="img/vercel-hook.png" alt="">
+                    <img src="img/sanity-hook-1.png" alt="">
+                    <img src="img/sanity-hook-2.png" alt="">
+                    <img src="img/sanity-hook-3.png" alt="">
+                </div>
+                <div id="source" class="content fade">
+                    <h1>Sources &amp; Credits</h1>
+                    <ul>
+                        <li><span>Fonts</span>
+                        <li><a href="https://fonts.google.com/specimen/Montserrat" target="_blank">Montserrat</a></li>
+                        <li><a href="https://fonts.google.com/specimen/Rubik?query=Rubik" target="_blank">Rubik</a></li>
+                         </li>
+                        </li><br>
+                        <li><span>Icon</span>
+                        <li><a href="https://fontawesome.com/">FontAwesome</a></li>
+                        </li><br>
+
+                        <li><span>CSS Framework</span>
+                        <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+                        <li><a href="https://react-bootstrap.netlify.app/" target="_blank">React Bootstrap</a></li>
+                        <li><a href="https://mui.com/" target="_blank">Material UI</a></li>
+                        </li><br>
+
+                        <li><span>React Libraries</span>
+                        <li><a href="https://react-slick.neostack.com/" target="_blank">React Slick</a></li>
+                        <li><a href="https://github.com/fkhadra/react-toastify#readme" target="_blank">React Toastify</a></li>
+                        <li><a href="https://sass-lang.com/" target="_blank">react-countup</a></li>
+                        </li><br>
+
+                        <li>
+                            <span>Content Management System<a href="https://www.sanity.io/">(Sanity)</a></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="support" class="content fade">
+                    <h1>Supports</h1>
+                    <p>Thank you for reading the documentaion. If you still have any question or any problem, please
+                        contact with us. We will give you best support.</p>
+                    <a href="https://themeforest.net/user/reacttemplatebuilder">React Template Builder</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
