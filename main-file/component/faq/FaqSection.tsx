@@ -5,9 +5,18 @@ import React, { useState } from "react";
 type Props = {
   img: string;
   faqData: FaqType[];
+  faqTitle: string;
+  faqSubHead: string;
+  faqDescription: string;
 };
 
-const FaqSection = ({ img, faqData }: Props) => {
+const FaqSection = ({
+  img,
+  faqData,
+  faqTitle,
+  faqSubHead,
+  faqDescription,
+}: Props) => {
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
 
   const handleAccordionBtn = (itemId: number) => {
@@ -29,13 +38,10 @@ const FaqSection = ({ img, faqData }: Props) => {
           <div className="col-xl-6 col-lg-6 wow fadeInRight">
             <div className="tf__faq_text">
               <div className="tf__heading_area tf__heading_area_left mb_25">
-                <h5>Our Education FAQ</h5>
-                <h2>Got Questions? Here Are Your Answers - FAQ</h2>
+                <h5>{faqTitle}</h5>
+                <h2>{faqSubHead}</h2>
               </div>
-              <p className="description">
-                Business tailored it design, management & support services
-                business agency elit, sed do eiusmod tempor.
-              </p>
+              <p className="description">{faqDescription}</p>
               <div className="tf__faq_accordion">
                 <div className="accordion" id="accordionExample">
                   {faqData?.slice(0, 4).map((item, index) => {
@@ -46,7 +52,20 @@ const FaqSection = ({ img, faqData }: Props) => {
                         className={`accordion-item ${item.color}`}
                         key={index}
                       >
-                        <h2 className="accordion-header" id={`${uniqueId}-header`}>
+                        <h2
+                          className="accordion-header"
+                          id={`${uniqueId}-header`}
+                        >
+                          {/* <button
+                            className={`accordion-button ${
+                              isOpen ? "" : "collapsed"
+                            }`}
+                            onClick={() => handleAccordionBtn(index)}
+                            aria-expanded={isOpen}
+                            aria-controls={`${uniqueId}-content`}
+                          >
+                            {item.question}
+                          </button> */}
                           <button
                             className={`accordion-button ${
                               isOpen ? "" : "collapsed"
@@ -70,7 +89,7 @@ const FaqSection = ({ img, faqData }: Props) => {
                             {Array.isArray(item.answer) ? (
                               <ul>
                                 {item.answer.map((line, idx) => (
-                                  <li key={idx}>{line}</li>
+                                  <li key={idx}>{line.text}</li>
                                 ))}
                               </ul>
                             ) : (

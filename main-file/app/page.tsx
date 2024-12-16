@@ -71,7 +71,13 @@ const page = async () => {
 
       {/* {teamData && <TeamSection style="tf__team_3 pt_250 pb_100" teamData={teamData}/>} */}
       {/* <ContactSection2 /> */}
-      <FaqSection img="images/faqs.jpg" faqData={FaqData} />
+      <FaqSection
+        img="images/faqs.jpg"
+        faqData={FaqData}
+        faqTitle="Why ORN-AI ?"
+        faqSubHead=""
+        faqDescription=""
+      />
 
       {/* {blogData && <BlogSection2 blogData={blogData}/>} */}
       <FooterSection2 style="tf__footer_3" logo="images/footer_logo3.png" />
