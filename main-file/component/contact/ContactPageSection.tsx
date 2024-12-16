@@ -1,5 +1,8 @@
 import React from "react";
 import ContactForm from "../form/ContactForm";
+import { PiPhoneCallLight } from "react-icons/pi";
+import { MdAttachEmail, MdAttachFile } from "react-icons/md";
+import { GrMapLocation } from "react-icons/gr";
 
 const ContactPageSection = () => {
   return (
@@ -12,9 +15,7 @@ const ContactPageSection = () => {
                 <h5>Contact Us</h5>
                 <h2>Get Our Contact Now.</h2>
               </div>
-              <p>
-                For any queries please feel free to contact us
-              </p>
+              <p>For any queries please feel free to contact us</p>
               <ContactForm />
             </div>
           </div>
@@ -22,27 +23,30 @@ const ContactPageSection = () => {
             <div className="tf__contact_text">
               <div className="tf__contact_single">
                 <div className="icon blue">
-                  <i className="fas fa-phone-alt"></i>
+                  {/* <i className="fas fa-phone-alt"></i> */}
+                  <PiPhoneCallLight />
                 </div>
                 <div className="text">
                   <h3>Call</h3>
-                  <a href="callto:+880254615566">+880254615566</a>
-                  <a href="callto:+826542556455">+826542556455</a>
+                  <a href="callto:+91 9876543210">+91 9876543210</a>
+                  <a href="callto:+91 9876543210">+91 9876543210</a>
                 </div>
               </div>
               <div className="tf__contact_single">
                 <div className="icon orange">
-                  <i className="fas fa-phone-alt"></i>
+                  {/* <i className="fas fa-phone-alt"></i> */}
+                  <MdAttachFile />
                 </div>
                 <div className="text">
                   <h3>mail</h3>
-                  <a href="mailto:neta@eobi.com">example@gmail.com</a>
-                  <a href="mailto:coraty@bara.com">orn-ai@gmail.com</a>
+                  <a href="mailto:ornAi@gmail.com">ornAi@gmail.com</a>
+                  <a href="mailto:ornAi@gmail.com">ornAi@gmail.com</a>
                 </div>
               </div>
               <div className="tf__contact_single">
                 <div className="icon green">
-                  <i className="fas fa-phone-alt"></i>
+                  {/* <i className="fas fa-phone-alt"></i> */}
+                  <GrMapLocation />
                 </div>
                 <div className="text">
                   <h3>address</h3>
