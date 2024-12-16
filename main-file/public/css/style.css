@@ -1573,6 +1573,7 @@ button {
   border-radius: 5px;
   overflow: hidden;
   border: none;
+  background-color: #ffffff;
 }
 
 .tf__faq_accordion .accordion-header {
@@ -1599,6 +1600,7 @@ button {
 
 .tf__faq_accordion .accordion-header button::before {
   position: absolute;
+
   content: "\f00c";
   color: var(--colorWhite);
   background: var(--colorPrimary);
@@ -1639,16 +1641,16 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   position: absolute;
   top: 18px;
   right: 20px;
 }
 
-.tf__faq_accordion .accordion-button:not(.collapsed)::after {
-  background: url(../images/arrow_icon_2.png);
-  background-position: center;
+/* .tf__faq_accordion .accordion-button:not(.collapsed)::after { */
+/* background: url(../images/arrow_icon_2.png); */
+/* background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 15px;
@@ -1658,7 +1660,7 @@ button {
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   -o-transform: rotate(0deg);
-}
+} */
 
 .tf__faq_accordion .accordion-header button:not(.collapsed) {
   background: var(--colorPrimary) !important;
@@ -1670,7 +1672,7 @@ button {
 }
 
 .tf__faq_accordion .accordion-body p {
-  font-size: 17px;
+  font-size: 14px;
   color: var(--paraColor);
 }
 
@@ -10636,7 +10638,6 @@ section.tf__counter_3 {
   color: #555;
 }
 
-
 ul {
   list-style: disc;
   margin-left: 1.5rem;
@@ -10649,10 +10650,10 @@ li {
   font-weight: 600;
   color: #555;
 }
-li span{
+li span {
   font-size: 18px;
   font-weight: 600;
-  color: #0A3981;
+  color: #0a3981;
 }
 
 .grooming-cards {
@@ -10689,7 +10690,7 @@ li span{
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-.card1{
+.card1 {
   border-top: 5px solid orange;
 }
 
@@ -10782,15 +10783,15 @@ li span{
   color: #1a73e8;
 } */
 
-.enroll-btn1:hover{
+.enroll-btn1:hover {
   background-color: orange;
 }
 
-.enroll-btn2:hover{
+.enroll-btn2:hover {
   background-color: rgb(53, 123, 151);
 }
 
-.enroll-btn3:hover{
+.enroll-btn3:hover {
   background-color: purple;
 }
 

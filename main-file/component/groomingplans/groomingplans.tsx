@@ -3,14 +3,15 @@
 import React from "react";
 import FaqSection from "@/component/faq/FaqSection";
 import { groomingFaqData } from "@/Data/groomingfaqs"; // Update the path as needed
+
 const ORNGroomingPlans = () => {
   return (
     <div className="grooming-container">
-      <h1 className="fade-in">ORN-AI Grooming Plans</h1>
+      {/* <h1 className="fade-in">ORN-AI Grooming Plans</h1>
       <p className="fade-up">
         Ready for the 3 P's? <br />
         <span>Polish Your Professional Potential</span>
-      </p>
+      </p> */}
 
       {/* <div className="grooming-sec1">
         <div className="sec1-text fade-in">
@@ -82,12 +83,17 @@ const ORNGroomingPlans = () => {
         </div>
       </div> */}
 
-<div>
-      <FaqSection 
-        img="/images/groomingfaq-img.jpg" // Replace with your image path
-        faqData={groomingFaqData} 
-      />
-    </div>
+      <div>
+        <FaqSection
+          img="/images/groomingfaq-img.jpg" // Replace with your image path
+          faqData={groomingFaqData}
+          faqTitle="ORN-AI Grooming Plans"
+          faqSubHead="Ready for the 3 P's?"
+          faqDescription="Polish Your Professional Potential
+
+"
+        />
+      </div>
 
       <div className="grooming-cards">
         <h3>Begin with our free assessment and invest in your future today.</h3>
@@ -102,7 +108,9 @@ const ORNGroomingPlans = () => {
                 </p>
               </div>
               <div className="enroll-btn">
-                <button className="cta-button enroll-btn1 hover-effect">Enroll now &rarr;</button>
+                <button className="cta-button enroll-btn1 hover-effect">
+                  Enroll now &rarr;
+                </button>
               </div>
             </div>
           </div>
@@ -116,7 +124,9 @@ const ORNGroomingPlans = () => {
                 </p>
               </div>
               <div className="enroll-btn">
-                <button className="cta-button enroll-btn2 hover-effect">Enroll now &rarr;</button>
+                <button className="cta-button enroll-btn2 hover-effect">
+                  Enroll now &rarr;
+                </button>
               </div>
             </div>
           </div>
@@ -127,7 +137,9 @@ const ORNGroomingPlans = () => {
                 <p>Set out on a path that readies you to take charge.</p>
               </div>
               <div className="enroll-btn">
-                <button className="cta-button enroll-btn3 hover-effect">Enroll now &rarr;</button>
+                <button className="cta-button enroll-btn3 hover-effect">
+                  Enroll now &rarr;
+                </button>
               </div>
             </div>
           </div>
