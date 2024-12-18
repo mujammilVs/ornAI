@@ -344,7 +344,7 @@ button {
   height: 515px;
   top: -125px;
   right: 0;
-  z-index: 1;
+  z-index: 0;
 }
 
 .tf__breadcrumb_text h2 {
@@ -2571,12 +2571,24 @@ button {
   border-radius: 10px;
 }
 
+.tf__about_2_text ul li .text{
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  text-align: start;
+
+}
+
 .tf__about_2_text ul li .text h4 {
   font-family: var(--paraFont);
   font-size: 20px;
   font-weight: 600;
   color: #333333;
   margin-bottom: 5px;
+  
+  
 }
 
 .tf__about_2_text ul li .text p {
@@ -11066,4 +11078,91 @@ li span {
   font-size: 1rem;
   color: #555;
   line-height: 1.5;
+}
+
+
+.auth-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.auth-popup h2{
+  font-size: 24px;
+  margin-bottom:20px;
+}
+
+.popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.popup-content {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  width: 450px;
+}
+
+.close-popup-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #0A3981;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.toggle-text {
+  margin-top: 15px;
+}
+
+.toggle-link {
+  color: #007bff;
+  cursor: pointer;
 }
