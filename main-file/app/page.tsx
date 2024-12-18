@@ -22,6 +22,7 @@ import { FaqData } from "@/Data/faqData";
 import { categoryMockData } from "@/Data/CategoryData";
 import { ActivityData } from "@/Data/activityData";
 // import ExploreORNAI from "@components/exploreornai/ExploreORNAI";
+
 import {
   ActivityType,
   BlogType,

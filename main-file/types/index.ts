@@ -1,3 +1,4 @@
+import { FranchiseDat } from "@type";
 export type EventType = {
   _id: string;
   imgSrc: {
@@ -83,13 +84,12 @@ export type ActivityType = {
 // };
 
 export type FaqType = {
-    _id: string;
-    color: string;
-    question: string;
-    answer: { text: string }[] | string; 
-  };
+  _id: string;
+  color: string;
+  question: string;
+  answer: { text: string }[] | string;
+};
 
-  
 export type ServiceType = {
   _id: string;
   iClassName: string;
@@ -126,4 +126,10 @@ export type CategoryType = {
   desc: string;
   title: string;
   color: string;
+};
+
+export type FranchiseData = {
+  _id: string;
+  desc: string;
+  title: string;
 };

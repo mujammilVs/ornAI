@@ -35,7 +35,7 @@ const ContactPageSection = () => {
               <div className="tf__contact_single">
                 <div className="icon orange">
                   {/* <i className="fas fa-phone-alt"></i> */}
-                  <MdAttachFile />
+                  <MdAttachEmail />
                 </div>
                 <div className="text">
                   <h3>mail</h3>
