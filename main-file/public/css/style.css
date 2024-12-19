@@ -336,7 +336,7 @@ button {
 .tf__breadcrumb .container::after {
   position: absolute;
   content: "";
-  background: url(../images/breadcrumb_bg_img.png);
+  /* background: url(../images/breadcrumb_bg_img.png); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -5107,8 +5107,11 @@ button {
   position: static;
   margin: 0;
   height: auto;
-  background-position: center top !important;
-  background-image: url(../images/banner_bg3.jpg);
+  /* background-position: center top !important; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/franchise.jpeg);
   width: 100vw;
 }
 
@@ -11066,4 +11069,23 @@ li span {
   font-size: 1rem;
   color: #555;
   line-height: 1.5;
+}
+
+.franchise__banner {
+  margin-top: -300px;
+  height: 700px;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  position: relative;
+  background-image: url(../images/franchise.jpeg);
+}
+
+.franchise__banner_text {
+  font-size: 15px;
+  margin-left: 30px;
+}
+
+.franchise__banner_text::before {
+  display: none;
 }

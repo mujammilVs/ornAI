@@ -1,17 +1,23 @@
 "use client";
-import { steps } from "@/Data/FranchiseData";
 import React from "react";
 import { MdArrowRight } from "react-icons/md";
 import { TbArrowBadgeRightFilled } from "react-icons/tb";
 import { RiArrowRightSLine } from "react-icons/ri";
+import Link from "next/link";
+import { FranchiseData } from "@/Data/FranchiseData";
+import { CourseData } from "@/Data/CourseData";
+import { ActivityData } from "@/Data/activityData";
+import ActivitySection2 from "../activity/ActivitySection2";
+import CourseSection2 from "../course/CourseSection2";
+import Franchise2 from "./Franchise2";
 
 const Franchise = () => {
   return (
     <main className="main-franchise">
-      <section>
+      {/* <section>
         <h1 className="heading"> Train Locally, Excel Globally with ORN-AI</h1>
-      </section>
-      <section className="main-section">
+      </section> */}
+      {/* <section className="main-section">
         <div className="section-left">
           <h1>
             At ORN-AI, we're redefining career development by combining
@@ -31,7 +37,46 @@ const Franchise = () => {
         <div className="section-right">
           <img src="/images/franchise.jpeg" alt="" />
         </div>
+      </section> */}
+
+      <section className="franchise__banner tf__banner_3">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-8 col-md-10 col-lg-8">
+              <div className="tf__banner_text wow fadeInUp">
+                {/* <h5>Welcome to ORN-AI</h5> */}
+                <h1>
+                  Train <span>Locally</span> <br /> Excel <span>Globally</span>
+                </h1>
+                <p>
+                  At ORN-AI, we're redefining career development by combining
+                  world-class training with a 100% Placement Guarantee. With
+                  over a decade of proven global expertise through Aguila
+                  Consulting, our Franchise Model empowers you to transform
+                  lives while building a successful business.
+                </p>
+                <ul className="d-flex flex-wrap align-items-center">
+                  <li>
+                    <Link className="common_btn_3" href="/courses">
+                      Apply for a Franchise
+                    </Link>
+                  </li>
+                  <li>
+                    {/* <a
+                    className="venobox play_btn"
+                    role="button"
+                    onClick={handleVideoShow}
+                  >
+                    <i className="fas fa-play"></i>
+                  </a> */}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+
       <section className="section3">
         <div>
           <h1>Why Partner with ORN-AI ?</h1>
@@ -101,13 +146,23 @@ const Franchise = () => {
 
       <section className="section5">
         <div className="cards-container">
-          {steps.map((step) => (
+          {FranchiseData.map((step) => (
             <div key={step._id} className="card">
               <h2 className="card-title">{step.title}</h2>
               <p className="card-description">{step.desc}</p>
             </div>
           ))}
         </div>
+      </section>
+
+      <section>
+        {/* {CourseData && <CourseSection2 courseData={CourseData} />} */}
+        {FranchiseData && (
+          <Franchise2
+            style="tf__activities_3 tf__activities_slider_area mt_100 pt_95 pb_100"
+            franchiseData={FranchiseData}
+          />
+        )}
       </section>
     </main>
   );

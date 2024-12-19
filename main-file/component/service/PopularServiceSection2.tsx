@@ -2,9 +2,9 @@ import React from "react";
 import ServiceSlider from "../slider/ServiceSlider";
 import { ServiceType } from "@/types";
 interface Props {
-  services: ServiceType[]
+  services: ServiceType[];
 }
-const PopularServiceSection2 = ({services} : Props) => {
+const PopularServiceSection2 = ({ services }: Props) => {
   return (
     <div className="tf__popular_services mt_100 pt_95 pb_100">
       <div className="container">
@@ -16,7 +16,7 @@ const PopularServiceSection2 = ({services} : Props) => {
             </div>
           </div>
         </div>
-        <ServiceSlider services={services}/>
+        <ServiceSlider services={services} />
       </div>
     </div>
   );

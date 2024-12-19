@@ -1,4 +1,3 @@
-import { FranchiseDat } from "@type";
 export type EventType = {
   _id: string;
   imgSrc: {
@@ -128,8 +127,10 @@ export type CategoryType = {
   color: string;
 };
 
-export type FranchiseData = {
+export type FranchiseType = {
   _id: string;
+  icon: string;
   desc: string;
   title: string;
+  color: string;
 };
