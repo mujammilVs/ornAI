@@ -14,31 +14,6 @@ import Franchise2 from "./Franchise2";
 const Franchise = () => {
   return (
     <main className="main-franchise">
-      {/* <section>
-        <h1 className="heading"> Train Locally, Excel Globally with ORN-AI</h1>
-      </section> */}
-      {/* <section className="main-section">
-        <div className="section-left">
-          <h1>
-            At ORN-AI, we're redefining career development by combining
-            world-class training with a{" "}
-            <span className="span">100% Placement Guarantee.</span> With over a
-            decade of proven global expertise through Aguila Consulting, our
-            Franchise Model empowers you to transform lives while building a
-            successful business.
-          </h1>
-          <button className="section-left-btn">
-            Know More
-            <span>
-              <RiArrowRightSLine />
-            </span>
-          </button>
-        </div>
-        <div className="section-right">
-          <img src="/images/franchise.jpeg" alt="" />
-        </div>
-      </section> */}
-
       <section className="franchise__banner tf__banner_3">
         <div className="container">
           <div className="row">
@@ -61,15 +36,7 @@ const Franchise = () => {
                       Apply for a Franchise
                     </Link>
                   </li>
-                  <li>
-                    {/* <a
-                    className="venobox play_btn"
-                    role="button"
-                    onClick={handleVideoShow}
-                  >
-                    <i className="fas fa-play"></i>
-                  </a> */}
-                  </li>
+                  <li></li>
                 </ul>
               </div>
             </div>
