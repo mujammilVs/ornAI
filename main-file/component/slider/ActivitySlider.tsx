@@ -66,4 +66,3 @@ const ActivitySlider = ({ activityData }: Props) => {
 };
 
 export default ActivitySlider;
-

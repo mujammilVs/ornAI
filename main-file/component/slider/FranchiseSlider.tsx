@@ -1,21 +1,22 @@
 "use client";
-import { ServiceType } from "@/types";
+import { FranchiseType } from "@/types";
 import React from "react";
 import Slider from "react-slick";
 
 interface Props {
-  services: ServiceType[];
+  FranchiseData: FranchiseType[];
 }
 
-const ServiceSlider = ({ services }: Props) => {
+const FranchiseSlider = ({ FranchiseData }: Props) => {
   return (
     <Slider
       className="row popular_service_slider wow fadeInUp"
-      slidesToShow={4} // Set the number of slides to show
+      slidesToShow={3}
       infinite={true}
       dots={true}
       arrows={false}
       autoplay={true}
+      slidesToScroll={1}
       responsive={[
         {
           breakpoint: 1400,
@@ -23,24 +24,24 @@ const ServiceSlider = ({ services }: Props) => {
             slidesToShow: 3,
           },
         },
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 3,
-          },
-        },
+        // {
+        //   breakpoint: 1200,
+        //   settings: {
+        //     slidesToShow: 3,
+        //   },
+        // },
         {
           breakpoint: 992,
           settings: {
             slidesToShow: 2,
           },
         },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-          },
-        },
+        // {
+        //   breakpoint: 768,
+        //   settings: {
+        //     slidesToShow: 2,
+        //   },
+        // },
         {
           breakpoint: 576,
           settings: {
@@ -49,17 +50,14 @@ const ServiceSlider = ({ services }: Props) => {
         },
       ]}
     >
-      {services.map((item) => (
+      {FranchiseData.map((item) => (
         <div className="col-xl-3" key={item._id}>
-          <div className={`tf__popular_service_single ${item.color}`}>
-            <span>
+          <div className={`tf__activities_item ${item.color}`}>
+            {/* <span>
               <i className={item.iClassName}></i>
-            </span>
+            </span> */}
             <h3>{item.title}</h3>
-            <p>{item.desc}</p>
-            <a href="#">
-              <i className="fas fa-long-arrow-right"></i>
-            </a>
+            <p>{item.desc}</p> {/* Display the description here */}
           </div>
         </div>
       ))}
@@ -67,4 +65,4 @@ const ServiceSlider = ({ services }: Props) => {
   );
 };
 
-export default ServiceSlider;
+export default FranchiseSlider;

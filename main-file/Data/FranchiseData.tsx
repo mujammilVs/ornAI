@@ -1,19 +1,25 @@
-import { FranchiseData } from "@/types";
+import { FranchiseType } from "@/types";
 
-export const steps: FranchiseData[] = [
+export const FranchiseData: FranchiseType[] = [
   {
     _id: "1",
-    title: "Apply to Become a Franchisee",
-    desc: "Submit your inquiry form to express your interest.",
+    icon: "fas fa-book",
+    desc: "across Cybersecurity, AI/ML, Data Visualization, Telecommunication, and more.",
+    title: "100+ Industry-Aligned Courses ",
+    color: "blue",
   },
   {
     _id: "2",
-    title: "Training & Onboarding",
-    desc: "Learn our proven training and placement methodologies to establish your franchise.",
+    icon: "fas fa-robot",
+    desc: "combined with AI-enhanced learning for a personalized experience.",
+    title: "Expert-Led Training ",
+    color: "red",
   },
   {
     _id: "3",
-    title: "Launch & Transform",
-    desc: "Start delivering ORN-AI's industry-leading programs and guarantee career success for your candidates.",
+    icon: "fas fa-user-check",
+    desc: "backed by a decade of global recruitment expertise",
+    title: "100% Placement Guarantee ",
+    color: "green",
   },
 ];
