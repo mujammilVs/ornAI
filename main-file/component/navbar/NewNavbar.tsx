@@ -1,20 +1,30 @@
-'use client'
+'use client';
 import React, { useState } from "react";
 import Link from "next/link";
+import AuthPopup from "../loginpopup/Loginpopup";
 
 function NewNavbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isAuthPopupOpen, setIsAuthPopupOpen] = useState(false);
+
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
+  const toggleAuthPopup = () => {
+    setIsAuthPopupOpen(!isAuthPopupOpen);
+  };
+
+  const closeAuthPopup = () => {
+    setIsAuthPopupOpen(false);
+  };
+
   return (
     <div className="main-nav">
-      <div className="navbar-logo ">
+      <div className="navbar-logo">
         <img src="./images/orn-logo.png" alt="logo" className="" />
       </div>
       <div className="navbar-container">
-        {/* Logo Section */}
-
         {/* Navigation Links */}
         <ul className="navbar-links">
           <li className="navbar-item">
@@ -22,7 +32,6 @@ function NewNavbar() {
               Home
             </a>
           </li>
-
           <li
             className="navbar-item navbar-dropdown"
             onMouseEnter={() => setIsDropdownOpen(true)}
@@ -32,13 +41,12 @@ function NewNavbar() {
               href="#"
               className="navbar-link"
               onClick={(e) => {
-                e.preventDefault(); // Prevent default navigation
+                e.preventDefault();
                 toggleDropdown();
               }}
             >
               Courses <i className="fas fa-chevron-down"></i>
             </a>
-            {/* Dropdown Menu */}
             <ul className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
               <li>
                 <Link href="/courses">All Courses</Link>
@@ -72,13 +80,18 @@ function NewNavbar() {
       </div>
       {/* Buttons Section */}
       <div className="navbar-buttons">
-        {/* <button className="navbar-button login-button">Login</button> */}
-        <button className="navbar-button register-button">
+        <button
+          className="navbar-button register-button"
+          onClick={toggleAuthPopup}
+        >
           Register | Login
         </button>
       </div>
+      {/* Auth Popup */}
+      {isAuthPopupOpen && <AuthPopup closePopup={closeAuthPopup} />}
     </div>
   );
 }
 
 export default NewNavbar;
+
