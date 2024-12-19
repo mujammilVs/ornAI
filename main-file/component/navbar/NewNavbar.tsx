@@ -11,8 +11,8 @@ function NewNavbar() {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const toggleAuthPopup = () => {
-    setIsAuthPopupOpen(!isAuthPopupOpen);
+  const openAuthPopup = () => {
+    setIsAuthPopupOpen(true);
   };
 
   const closeAuthPopup = () => {
@@ -21,11 +21,13 @@ function NewNavbar() {
 
   return (
     <div className="main-nav">
+      {/* Logo Section */}
       <div className="navbar-logo">
-        <img src="./images/orn-logo.png" alt="logo" className="" />
+        <img src="./images/orn-logo.png" alt="logo" />
       </div>
+
+      {/* Navigation Links */}
       <div className="navbar-container">
-        {/* Navigation Links */}
         <ul className="navbar-links">
           <li className="navbar-item">
             <a href="/" className="navbar-link">
@@ -78,15 +80,17 @@ function NewNavbar() {
           </li>
         </ul>
       </div>
+
       {/* Buttons Section */}
       <div className="navbar-buttons">
         <button
           className="navbar-button register-button"
-          onClick={toggleAuthPopup}
+          onClick={openAuthPopup}
         >
           Register | Login
         </button>
       </div>
+
       {/* Auth Popup */}
       {isAuthPopupOpen && <AuthPopup closePopup={closeAuthPopup} />}
     </div>
@@ -94,4 +98,3 @@ function NewNavbar() {
 }
 
 export default NewNavbar;
-
