@@ -11124,6 +11124,11 @@ li span {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1001;
   width: 450px;
+  
+}
+
+.popup-content h2{
+  margin-bottom: 20px;
 }
 
 .close-popup-btn {
