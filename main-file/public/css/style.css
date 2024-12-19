@@ -11022,12 +11022,88 @@ li span {
   border-bottom-left-radius: 250px;
 }
 
-.section5 {
+/* .section5 {
   display: flex;
 
   justify-content: space-between;
   margin: 8rem;
-  width: 100vw;
+  width: 100vw;body {
+  background-color: #1a73e8;
+} */
+
+.grooming-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin: 8rem;
+  margin-top: 10rem;
+}
+
+.card {
+  width: 350px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card1 {
+  border-top: 5px solid orange;
+}
+
+.card2 {
+  border-top: 5px solid rgb(53, 123, 151);
+}
+
+.card3 {
+  border-top: 5px solid purple;
+}
+
+.card4 {
+  border-top: 5px solid blue;
+}
+
+.enroll-btn {
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 4px;
+  background-color: #062961;
+  color: #ffffff;
+  /* text-align: center; */
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.enroll-btn:hover {
+  color: #002f6c;
+  background-color: #fff;
+  border: 1px solid #002f6c;
+}
+
+.enroll-btn1:hover {
+  background-color: orange;
+}
+
+.enroll-btn2:hover {
+  background-color: rgb(53, 123, 151);
+}
+
+.enroll-btn3:hover {
+  background-color: purple;
+}
+
+.enroll-btn4:hover {
+  background-color: blue;
+
 }
 
 .cards-container {

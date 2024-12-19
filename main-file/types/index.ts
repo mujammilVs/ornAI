@@ -76,12 +76,14 @@ export type ActivityType = {
   color: string;
 };
 
+
 // export type FaqType = {
 //   _id: string;
 //   color: string;
 //   question: string;
 //   answer: string[] | string;
 // };
+
 
 export type FaqType = {
   _id: string;
